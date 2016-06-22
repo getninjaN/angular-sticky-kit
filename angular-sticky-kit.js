@@ -4,11 +4,10 @@ angular.module("angular-sticky-kit", [])
   return {
     restrict: "A",
     link: function(scope, element, attributes) {
-      var customOptions, defaultOpts, options, stickyElement, stickyKitAttribute;
-      options = {};
+      var customOptions, options, stickyElement, stickyKitAttribute;
       stickyKitAttribute = scope.$eval(attributes.stickyKit);
-      customOptions = Object.isObject(stickyKitAttribute) ? stickyKitAttribute : {};
-      defaultOpts = {
+      customOptions = typeof stickyKitAttribute == 'object' ? stickyKitAttribute : {};
+      options = {
         sticky_class: "is_stuck",
         inner_scrolling: true,
         recalc_every: null,
@@ -23,7 +22,9 @@ angular.module("angular-sticky-kit", [])
         recalc: null,
         detach: null
       };
-      options = Object.merge(defaultOpts, customOptions);
+      for (var attrname in customOptions) {
+        options[attrname] = customOptions[attrname];
+      }
       stickyElement = element.stick_in_parent(options);
       if (typeof stick !== "undefined" && stick !== null) {
         element.on("sticky_kit:stick", stick);
