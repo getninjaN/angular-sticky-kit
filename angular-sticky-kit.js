@@ -18,7 +18,7 @@ angular.module("angular-sticky-kit", [])
         stick: null,
         unstick: null,
         bottom: null,
-        unbuttom: null,
+        unbottom: null,
         recalc: null,
         detach: null
       };
