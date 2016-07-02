@@ -26,23 +26,23 @@ angular.module("angular-sticky-kit", [])
         options[attrname] = customOptions[attrname];
       }
       stickyElement = element.stick_in_parent(options);
-      if (typeof stick !== "undefined" && stick !== null) {
-        element.on("sticky_kit:stick", stick);
+      if (typeof options.stick !== "undefined" && options.stick !== null) {
+        element.on("sticky_kit:stick", options.stick);
       }
-      if (typeof unstick !== "undefined" && unstick !== null) {
-        element.on("sticky_kit:unstick", unstick);
+      if (typeof options.unstick !== "undefined" && options.unstick !== null) {
+        element.on("sticky_kit:unstick", options.unstick);
       }
-      if (typeof bottom !== "undefined" && bottom !== null) {
-        element.on("sticky_kit:bottom", bottom);
+      if (typeof options.bottom !== "undefined" && options.bottom !== null) {
+        element.on("sticky_kit:bottom", options.bottom);
       }
-      if (typeof unbottom !== "undefined" && unbottom !== null) {
-        element.on("sticky_kit:unbottom", unbottom);
+      if (typeof options.unbottom !== "undefined" && options.unbottom !== null) {
+        element.on("sticky_kit:unbottom", options.unbottom);
       }
-      if (typeof recalc !== "undefined" && recalc !== null) {
-        element.on("sticky_kit:recalc", recalc);
+      if (typeof options.recalc !== "undefined" && options.recalc !== null) {
+        element.on("sticky_kit:recalc", options.recalc);
       }
-      if (typeof detach !== "undefined" && detach !== null) {
-        return element.on("sticky_kit:detach", detach);
+      if (typeof options.detach !== "undefined" && options.detach !== null) {
+        return element.on("sticky_kit:detach", options.detach);
       }
     }
   };
