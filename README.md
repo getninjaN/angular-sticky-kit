@@ -59,7 +59,7 @@ Like so:
 ```javascript
 stick: function() {
   $scope.message = "Oh no! I'm stuck!";
-  $scop.$apply();
+  $scope.$apply();
 }
 ```
 I might fix this, I might not.
