@@ -54,14 +54,11 @@ These are the default options, based on Sticky-Kit:
 
 Events:
 ------
-As of now you might have to add `$scope.$apply()` last in the event functions.
-Like so:
+Just use the events as you please. :)
 ```javascript
 stick: function() {
   $scope.message = "Oh no! I'm stuck!";
-  $scope.$apply();
 }
 ```
-I might fix this, I might not.
 
 More information about events and options can be found over at the [Sticky-Kit reference](http://leafo.net/sticky-kit/#reference).
