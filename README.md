@@ -3,6 +3,11 @@ angular-sticky-kit
 
 AngularJS directive for [Sticky-Kit](http://leafo.net/sticky-kit/) - A jQuery plugin for making smart sticky elements.
 
+Demo:
+-------------------------
+It's ugly, but hopefully works :)
+
+https://plnkr.co/edit/lgZTzcveDYkf5jCqOgC5
 
 Installation (via Bower):
 -------------------------
